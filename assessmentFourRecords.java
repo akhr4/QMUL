@@ -15,6 +15,7 @@ class assessmentFourRecords{
 	public static void main(String args[]){ //Main method
 		//Creating records for each station 
 		station stepneyGreen = new station();
+		//Using accessor methods to set the values of each attribute to the station 
 		stepneyGreen.stationName = "stepney green";
 		stepneyGreen.toilet = false;
 		stepneyGreen.cost = 0;
@@ -51,11 +52,11 @@ class assessmentFourRecords{
 	//Conditionals
 	String unavailable = " station currently does not have a toilet in place.";
 	if (stationSearched.contains("green park")){
-		if (greenPark.toilet){
+		if (greenPark.toilet){ //If green park has a toilet, print the cost 
 		System.out.println(greenPark.stationName + " has a toilet costing " + greenPark.cost + "p");
 		}
 		else{
-			System.out.println(greenPark.stationName + unavailable);
+			System.out.println(greenPark.stationName + unavailable); //If there is no toilet, print the contents of the unavailable variale which informs the user. 
 		}
 	}
 	else if (stationSearched.contains("stepney green")){
@@ -83,6 +84,7 @@ class assessmentFourRecords{
 		}
 	}
 	else{
+		//If the uer's input is neither of the stations in the record, it will print this and start again by recalling everything from main
 		System.out.println("Is " + stationSearched +" a London underground station? Check your spelling."); //If the input is not understood, it takes the user back to main method to try again
 		assessmentFourRecords.main(null); //Take it back to main with incorect input
 	}
