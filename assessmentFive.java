@@ -19,8 +19,8 @@ class assessmentFive{
 	public static void loop(int bedQuantity){
 		for (int i = 0; i < bedQuantity; i ++){ //For loop Starts at i, continues as long as i is less than what user specified and increments by one after every itteration 
 			if (bedQuantity - i == 1){ //Condition to stop the loop to show a different message when only 1 person is left 
-						System.out.println("There was 1 in the bed and the little one said Good Night!");
-						break; //Break for loop if the conditional is met 
+				System.out.println("There was 1 in the bed and the little one said Good Night!");
+				break; //Break for loop if the conditional is met 
 			}
 			System.out.println("There were " + (bedQuantity - i) + " in the bed and the little one said,"); //Keep printing quantity and decrement for every new statement 
 			System.out.println("Roll over, Roll over");
